@@ -2,12 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../styles/index.css";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faClock
+} from "@fortawesome/free-regular-svg-icons";
 
 const SecondsCounter = (props) => {
         
     return (
-        <div className="container-fluid bg-black d-flex justify-content-center m-4">
-            <div className="text-white border border-1 rounded mt-4 mb-4 me-4 bg-dark d-flex justify-content-center" style={{width: "150px", height: "200px", fontSize: "120px"}}><i className="fa-regular fa-clock"></i></div>
+        <div className="container-fluid bg-black d-flex justify-content-center mt-3">
+            <div className="text-white border border-1 rounded mt-4 mb-4 me-4 bg-dark d-flex justify-content-center align-items-center" style={{width: "150px", height: "200px", fontSize: "120px"}}><FontAwesomeIcon icon={faClock}/></div>
             <div className="text-white border border-1 rounded mt-4 mb-4 me-4 bg-dark d-flex justify-content-center" style={{width: "150px", height: "200px", fontSize: "120px"}}>{props.digitSix % 10}</div>
             <div className="text-white border border-1 rounded mt-4 mb-4 me-4 bg-dark d-flex justify-content-center" style={{width: "150px", height: "200px", fontSize: "120px"}}>{props.digitFive % 10}</div>
             <div className="text-white border border-1 rounded mt-4 mb-4 me-4 bg-dark d-flex justify-content-center" style={{width: "150px", height: "200px", fontSize: "120px"}}>{props.digitFour % 10}</div>
